@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="false">Погода в городах мира</string>
+    <string name="select_town" translatable="false">Выберете город</string>
+    <string name="temperature" translatable="false">Температура воздуха</string>>
+    <string name="air_humidity" translatable="false">Относительная влажность воздуха</string>>
+    <string name="sky_condition" translatable="false">Состояние неба</string>
+    <string name="pressure" translatable="false">Давление</string>
+    <string name="wind_speed" translatable="false">Скорость ветра</string>
+    <string name="wind_directions" translatable="false">Направление ветра</string>
+    <string name="precipitation" translatable="false">Осадки</string>
+    <string name="day_week" translatable="false">День недели</string>
+    <string name="date" translatable="false">Дата</string>>
+    <string name="bottom_found_town" translatable="false">Поиск города</string>
+    <string name="hint_town" translatable="false">Выберете ваш город</string>
+    <string name="your_town" translatable="false">Ваш город</string>
+
+</resources>

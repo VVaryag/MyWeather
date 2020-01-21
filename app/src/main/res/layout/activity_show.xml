@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityShow"
+     android:background="@color/blue_background">
+
+
+    <TextView
+        android:id="@+id/view_town"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/view_date"
+        android:text="Empty"
+        android:textSize="36sp"
+        android:textAllCaps="true"
+        android:textColor="@color/white_text"/>
+
+    <TextView
+        android:id="@+id/view_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:textAllCaps="true"
+        android:text="Empty"
+        android:textSize="24sp"
+        android:textColor="@color/white_text"/>
+
+    <TextView
+        android:id="@+id/view_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_town"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Empty"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/view_wind_directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_temperature"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="75dp"
+        android:text="Empty"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/view_wind_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_wind_directions"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="38dp"
+        android:text="Empty"
+        android:textSize="16sp"
+        android:textColor="@color/white_text" />
+
+    <TextView
+        android:id="@+id/view_pressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_temperature"
+        android:layout_marginStart="259dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toEndOf="@+id/view_wind_directions"
+        android:text="Empty"
+        android:textSize="16sp"
+        android:textColor="@color/white_text"/>
+
+    <TextView
+        android:id="@+id/view_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_pressure"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:text="Empty"
+        android:textColor="@color/white_text"/>
+
+    <TextView
+        android:id="@+id/view_sky_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_temperature"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="75dp"
+        android:layout_toEndOf="@+id/view_wind_directions"
+        android:text="Empty"
+        android:textColor="@color/white_text"/>
+
+    <TextView
+        android:id="@+id/view_precipitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_temperature"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="137dp"
+        android:layout_toEndOf="@+id/view_wind_directions"
+        android:text="Empty"
+        android:textColor="@color/white_text" />
+</RelativeLayout>
