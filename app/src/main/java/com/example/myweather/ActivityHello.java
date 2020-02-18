@@ -8,9 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 
 
-
 public class ActivityHello extends AppCompatActivity {
-    public static String town ;
+    public static String town;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +23,7 @@ public class ActivityHello extends AppCompatActivity {
         Intent weather_in_town = new Intent(this, ActivityShow.class);
         weather_in_town.putExtra("myTown", town);
         startActivity(weather_in_town);
-        new QueryWeather();
-
 
     }
-
-    public static String set_town() {
-
-        return town;
-    }
-
 
 }
