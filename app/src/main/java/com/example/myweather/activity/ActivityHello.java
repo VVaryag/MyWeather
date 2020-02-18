@@ -1,4 +1,4 @@
-package com.example.myweather;
+package com.example.myweather.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import com.example.myweather.R;
 
 
 public class ActivityHello extends AppCompatActivity {
@@ -22,8 +24,8 @@ public class ActivityHello extends AppCompatActivity {
         town = enter_town.getText().toString();
         Intent weather_in_town = new Intent(this, ActivityShow.class);
         weather_in_town.putExtra("myTown", town);
-        startActivity(weather_in_town);
 
+        startActivity(weather_in_town);
     }
 
 }
