@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class QueryWeather {
     private static QueryWeather mInstance;
-    private static final  String BASE_URL = "https://api.openweathermap.org";
+    private static final String BASE_URL = "https://api.openweathermap.org";
     private Retrofit mRetrofit;
 
     private QueryWeather(){

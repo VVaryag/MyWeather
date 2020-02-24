@@ -87,7 +87,7 @@
         android:text="Empty"
         android:textColor="@color/white_text"/>
 
-    <TextView
+    <ImageView
         android:id="@+id/view_sky_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
