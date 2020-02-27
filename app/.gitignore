@@ -1,1 +1,13 @@
-/build
+.gradle/
+.idea/
+app/build/
+build/
+gradle/
+local.properties
+*.iml
+*.zip
+/captures
+gradlew
+gradlew.bat
+/gradle.properties
+

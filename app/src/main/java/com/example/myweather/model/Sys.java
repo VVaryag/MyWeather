@@ -54,7 +54,8 @@ public class Sys {
 
     @Override
     public String toString() {
-        return "\nClassPojo :  \n[country = " + country + ", sunrise = " + sunrise + ", sunset = " + sunset + ", id = " + id + ", type = " + type + "]";
+        return "\nClassPojo :  \n[country = " + country + ", sunrise = " + sunrise +
+                ", sunset = " + sunset + ", id = " + id + ", type = " + type + "]";
     }
 }
 
