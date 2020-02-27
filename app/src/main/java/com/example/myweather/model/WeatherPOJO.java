@@ -1,7 +1,6 @@
 package com.example.myweather.model;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+
 
 public class WeatherPOJO {
     private String visibility;

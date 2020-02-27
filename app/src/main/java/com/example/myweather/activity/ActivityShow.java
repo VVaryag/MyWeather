@@ -8,7 +8,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.myweather.R;
-import com.example.myweather.model.Clouds;
+
 import com.example.myweather.model.WeatherPOJO;
 import com.example.myweather.network.JSONPlaceHolderApi;
 import com.example.myweather.network.QueryWeather;
@@ -24,8 +24,9 @@ public class ActivityShow extends AppCompatActivity {
     public static final String TAG = "retrofit";
 
 
-    public TextView view_town, view_date, view_temperature, view_wind_direction, view_wind_speed, view_pressure, view_humidity,
-            view_sky_condition, view_precipitation;
+    public TextView view_town, view_date, view_temperature,
+            view_wind_direction, view_wind_speed, view_pressure, view_humidity,
+            view_precipitation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
