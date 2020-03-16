@@ -25,16 +25,11 @@ public class ActivityHello extends AppCompatActivity {
         setContentView(R.layout.activity_hello);
         enter_town = findViewById(R.id.enter_town);
 
-
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, DataClass.city);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         enter_town.setAdapter(adapter);
         enter_town.setOnItemSelectedListener(onItemSelectedListener());
-
-
-
-
     }
 
     AdapterView.OnItemSelectedListener onItemSelectedListener(){
@@ -42,10 +37,12 @@ public class ActivityHello extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                town = parent.getItemAtPosition(position).toString();
-
+                show_weather(town);
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+                finish();
             }
 
         };

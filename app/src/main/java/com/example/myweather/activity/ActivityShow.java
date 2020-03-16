@@ -27,8 +27,8 @@ public class ActivityShow extends AppCompatActivity {
 
 
     public TextView view_town, view_date, view_temperature,
-            view_wind_direction, view_wind_speed, view_pressure, view_humidity,
-            view_precipitation;
+                    view_wind_direction, view_wind_speed,
+                    view_pressure, view_humidity, sky_condition;
     public ImageView view_sky_condition;
 
 
@@ -48,7 +48,7 @@ public class ActivityShow extends AppCompatActivity {
         view_wind_speed = findViewById(R.id.view_wind_speed);
         view_pressure = findViewById(R.id.view_pressure);
         view_humidity = findViewById(R.id.view_humidity);
-        view_precipitation = findViewById(R.id.view_precipitation);
+        sky_condition = findViewById(R.id.sky_condition);
         view_sky_condition = findViewById(R.id.view_sky_condition);
         query(town);
         view_date.setText(setDate());
@@ -73,6 +73,7 @@ public class ActivityShow extends AppCompatActivity {
                     view_humidity.setText(weatherPOJO.getMain().getHumidity());
                     view_wind_direction.setText(weatherPOJO.getWind().getDeg());
                     view_wind_speed.setText(weatherPOJO.getWind().getSpeed());
+                    sky_condition.setText(weatherPOJO.getWeatherBase().get(0).getDescription());
 
                     String icon = weatherPOJO.getWeatherBase().get(0).getIcon();
                     Picasso.get().load("https://openweathermap.org/img/wn/" + icon + "@2x.png").into(view_sky_condition);

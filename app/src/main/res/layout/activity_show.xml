@@ -12,13 +12,55 @@
 
 
     <TextView
+        android:id="@+id/humidity"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="294dp"
+        android:layout_marginTop="491dp"
+        android:layout_marginEnd="-1dp"
+        android:text="Humidity"
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/pressure"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="367dp"
+        android:layout_marginEnd="1dp"
+        android:text="Pressure"
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/wind_direction"
+        android:layout_width="174dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="363dp"
+        android:layout_marginEnd="219dp"
+        android:text="Wind direction"
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/view_town"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/view_date"
         android:text="Empty"
-        android:textSize="36sp"
+        android:textSize="48sp"
         android:textAllCaps="true"
         android:textColor="@color/white_text"/>
 
@@ -30,83 +72,116 @@
         android:layout_marginTop="20sp"
         android:textAllCaps="true"
         android:text="Empty"
-        android:textSize="24sp"
+        android:textSize="32sp"
         android:textColor="@color/white_text"/>
 
     <TextView
         android:id="@+id/view_temperature"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="97dp"
         android:layout_below="@id/view_town"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="104dp"
         android:text="Empty"
         android:textColor="@color/white_text"
-        android:textSize="24sp"/>
+        android:textSize="64sp" />
 
     <TextView
         android:id="@+id/view_wind_directions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_temperature"
+        android:layout_width="86dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/wind_direction"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="3dp"
         android:text="Empty"
-        android:textSize="16sp" />
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/wind_speed"
+        android:layout_width="137dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/view_wind_directions"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="257dp"
+        android:text="Wind speed"
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/view_wind_speed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_wind_directions"
+        android:layout_width="101dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/wind_speed"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="-5dp"
         android:text="Empty"
-        android:textSize="16sp"
-        android:textColor="@color/white_text" />
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/sky_condition"
+        android:layout_width="101dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/view_sky_condition"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="119dp"
+        android:text="Empty"
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/view_pressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="56dp"
         android:layout_below="@id/view_temperature"
-        android:layout_marginStart="259dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginStart="191dp"
+        android:layout_marginTop="118dp"
         android:layout_marginEnd="30dp"
         android:layout_toEndOf="@+id/view_wind_directions"
         android:text="Empty"
-        android:textSize="16sp"
-        android:textColor="@color/white_text"/>
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/view_humidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="84dp"
+        android:layout_height="52dp"
         android:layout_below="@id/view_pressure"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="22dp"
         android:text="Empty"
-        android:textColor="@color/white_text"/>
-
-      <TextView
-        android:id="@+id/view_precipitation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_temperature"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="154dp"
-        android:layout_toEndOf="@+id/view_wind_directions"
-        android:text="Empty"
-        android:textColor="@color/white_text" />
+        android:textColor="@color/white_text"
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/view_sky_condition"
-        android:layout_width="94dp"
-        android:layout_height="83dp"
+        android:layout_width="116dp"
+        android:layout_height="106dp"
         android:layout_below="@+id/view_temperature"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="157dp" />
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="117dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="152dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginBottom="431dp"
+        app:srcCompat="@drawable/term" />
 
 </RelativeLayout>
