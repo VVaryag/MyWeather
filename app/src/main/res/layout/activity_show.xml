@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -87,25 +89,24 @@
         android:text="Empty"
         android:textColor="@color/white_text"/>
 
-    <ImageView
-        android:id="@+id/view_sky_condition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_temperature"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="75dp"
-        android:layout_toEndOf="@+id/view_wind_directions"
-        android:text="Empty"
-        android:textColor="@color/white_text"/>
-
-    <TextView
+      <TextView
         android:id="@+id/view_precipitation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_temperature"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="154dp"
         android:layout_toEndOf="@+id/view_wind_directions"
         android:text="Empty"
         android:textColor="@color/white_text" />
+
+    <ImageView
+        android:id="@+id/view_sky_condition"
+        android:layout_width="94dp"
+        android:layout_height="83dp"
+        android:layout_below="@+id/view_temperature"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="157dp" />
+
 </RelativeLayout>

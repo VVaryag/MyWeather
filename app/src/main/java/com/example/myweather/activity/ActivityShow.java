@@ -1,32 +1,36 @@
 package com.example.myweather.activity;
 
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
-
 import com.example.myweather.R;
-
 import com.example.myweather.model.WeatherPOJO;
 import com.example.myweather.network.JSONPlaceHolderApi;
 import com.example.myweather.network.QueryWeather;
+import com.squareup.picasso.Picasso;
 
-import java.lang.String;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
 public class ActivityShow extends AppCompatActivity {
-    public static final String TAG = "retrofit";
+
 
 
     public TextView view_town, view_date, view_temperature,
             view_wind_direction, view_wind_speed, view_pressure, view_humidity,
             view_precipitation;
+    public ImageView view_sky_condition;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,7 @@ public class ActivityShow extends AppCompatActivity {
         Bundle input = getIntent().getExtras();
         String town = input.get("myTown").toString();
 
+
         view_town.setText(town);
         view_date = findViewById(R.id.view_date);
         view_temperature = findViewById(R.id.view_temperature);
@@ -44,20 +49,22 @@ public class ActivityShow extends AppCompatActivity {
         view_pressure = findViewById(R.id.view_pressure);
         view_humidity = findViewById(R.id.view_humidity);
         view_precipitation = findViewById(R.id.view_precipitation);
+        view_sky_condition = findViewById(R.id.view_sky_condition);
         query(town);
+        view_date.setText(setDate());
+
     }
 
+
     public void query(String town) {
-
-        Log.d(TAG, "Start query");
-
-
+        Log.d(DataClass.TAG2, town);
+        Log.d(DataClass.TAG, "Start query");
         QueryWeather.getInstance().getJSONApi()
                 .getUrlData(town, "metric", JSONPlaceHolderApi.api).enqueue(new Callback<WeatherPOJO>() {
 
             @Override
             public void onResponse(@NonNull Call<WeatherPOJO> call, @NonNull Response<WeatherPOJO> response) {
-                Log.d(TAG, "Start Response");
+                Log.d(DataClass.TAG, "Start Response");
                 if (response.isSuccessful()) {
                     WeatherPOJO weatherPOJO = response.body();
 
@@ -67,15 +74,26 @@ public class ActivityShow extends AppCompatActivity {
                     view_wind_direction.setText(weatherPOJO.getWind().getDeg());
                     view_wind_speed.setText(weatherPOJO.getWind().getSpeed());
 
-                    Log.d(TAG, weatherPOJO.toString());
+                    String icon = weatherPOJO.getWeatherBase().get(0).getIcon();
+                    Picasso.get().load("https://openweathermap.org/img/wn/" + icon + "@2x.png").into(view_sky_condition);
+
+
+                    Log.d(DataClass.TAG, weatherPOJO.toString());
                 }
             }
 
             @Override
             public void onFailure(Call<WeatherPOJO> call, Throwable t) {
-                Log.e(TAG, call.toString());
+                Log.e(DataClass.TAG, call.toString());
             }
         });
     }
+
+    private String setDate (){
+        String date = new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault()).format(new Date());
+        return date;
+    }
+
 }
+
 
