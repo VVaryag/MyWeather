@@ -1,5 +1,6 @@
 package com.example.myweather.model;
 
+import androidx.annotation.NonNull;
 
 import java.util.List;
 
@@ -123,6 +124,7 @@ public class WeatherPOJO {
         this.weather = weatherBase;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "\nClassPojo \n[visibility = " + visibility + ", timezone = " + timezone +
