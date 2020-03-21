@@ -77,12 +77,12 @@
 
     <TextView
         android:id="@+id/view_temperature"
-        android:layout_width="wrap_content"
-        android:layout_height="97dp"
+        android:layout_width="85dp"
+        android:layout_height="107dp"
         android:layout_below="@id/view_town"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="198dp"
         android:text="Empty"
         android:textColor="@color/white_text"
         android:textSize="64sp" />
@@ -130,8 +130,8 @@
         android:layout_below="@+id/view_sky_condition"
         android:layout_alignParentEnd="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="-5dp"
-        android:layout_marginEnd="119dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="32dp"
         android:text="Empty"
         android:textColor="@color/white_text"
         android:textSize="24sp" />
@@ -168,9 +168,9 @@
         android:layout_below="@+id/view_temperature"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="276dp"
-        android:layout_marginEnd="117dp" />
+        android:layout_marginStart="265dp"
+        android:layout_marginTop="-119dp"
+        android:layout_marginEnd="29dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -179,9 +179,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="210dp"
-        android:layout_marginBottom="431dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="309dp"
+        android:layout_marginBottom="433dp"
         app:srcCompat="@drawable/term" />
 
 </RelativeLayout>
