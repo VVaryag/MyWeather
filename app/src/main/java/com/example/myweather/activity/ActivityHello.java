@@ -13,10 +13,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.myweather.R;
+import com.example.myweather.repository.Repository;
 
 
 public class ActivityHello extends AppCompatActivity {
-    public static String town = "" ;
+    public static String town = "";
     Spinner enter_town;
 
     @Override
@@ -26,17 +27,17 @@ public class ActivityHello extends AppCompatActivity {
         enter_town = findViewById(R.id.enter_town);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, DataClass.city);
+                android.R.layout.simple_list_item_1, Repository.citys);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         enter_town.setAdapter(adapter);
         enter_town.setOnItemSelectedListener(onItemSelectedListener());
     }
 
-    AdapterView.OnItemSelectedListener onItemSelectedListener(){
+    AdapterView.OnItemSelectedListener onItemSelectedListener() {
         return new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               town = parent.getItemAtPosition(position).toString();
+                town = parent.getItemAtPosition(position).toString();
                 show_weather(town);
             }
 

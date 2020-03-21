@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ActivityShow"
-     android:background="@color/blue_background">
+    android:background="@color/blue_background"
+    tools:context=".activity.ActivityShow">
 
+    <Spinner
+        android:id="@+id/spinner_city"
+        android:layout_width="198dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="2dp"
+        android:hint="@string/hint_town"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:text="Kyiv" />
 
     <TextView
         android:id="@+id/humidity"
@@ -21,9 +31,9 @@
         android:layout_marginStart="294dp"
         android:layout_marginTop="491dp"
         android:layout_marginEnd="-1dp"
-        android:text="Humidity"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Humidity" />
 
     <TextView
         android:id="@+id/pressure"
@@ -35,9 +45,9 @@
         android:layout_marginStart="292dp"
         android:layout_marginTop="367dp"
         android:layout_marginEnd="1dp"
-        android:text="Pressure"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Pressure" />
 
     <TextView
         android:id="@+id/wind_direction"
@@ -49,31 +59,32 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="363dp"
         android:layout_marginEnd="219dp"
-        android:text="Wind direction"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Wind direction" />
 
     <TextView
         android:id="@+id/view_town"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/view_date"
-        android:text="Empty"
-        android:textSize="48sp"
+        android:layout_centerHorizontal="true"
         android:textAllCaps="true"
-        android:textColor="@color/white_text"/>
+        android:textColor="@color/white_text"
+        android:textSize="48sp"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="20sp"
+        android:layout_marginEnd="86dp"
         android:textAllCaps="true"
-        android:text="Empty"
+        android:textColor="@color/white_text"
         android:textSize="32sp"
-        android:textColor="@color/white_text"/>
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_temperature"
@@ -83,9 +94,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="104dp"
-        android:text="Empty"
         android:textColor="@color/white_text"
-        android:textSize="64sp" />
+        android:textSize="64sp"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_wind_directions"
@@ -94,9 +105,9 @@
         android:layout_below="@+id/wind_direction"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="3dp"
-        android:text="Empty"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/wind_speed"
@@ -108,9 +119,9 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="257dp"
-        android:text="Wind speed"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Wind speed" />
 
     <TextView
         android:id="@+id/view_wind_speed"
@@ -119,9 +130,9 @@
         android:layout_below="@+id/wind_speed"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="-5dp"
-        android:text="Empty"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/sky_condition"
@@ -132,9 +143,9 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="-5dp"
         android:layout_marginEnd="119dp"
-        android:text="Empty"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_pressure"
@@ -145,9 +156,9 @@
         android:layout_marginTop="118dp"
         android:layout_marginEnd="30dp"
         android:layout_toEndOf="@+id/view_wind_directions"
-        android:text="Empty"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_humidity"
@@ -157,9 +168,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="77dp"
         android:layout_marginEnd="22dp"
-        android:text="Empty"
         android:textColor="@color/white_text"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        tools:text="Empty" />
 
     <ImageView
         android:id="@+id/view_sky_condition"
@@ -179,9 +190,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="210dp"
-        android:layout_marginBottom="431dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="309dp"
+        android:layout_marginBottom="385dp"
         app:srcCompat="@drawable/term" />
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
 </RelativeLayout>
