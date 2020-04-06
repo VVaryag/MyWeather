@@ -14,8 +14,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.room.Room;
 
 import com.example.myweather.R;
+import com.example.myweather.database.CitiesDatabase;
 import com.example.myweather.model.WeatherPOJO;
 import com.example.myweather.network.JSONPlaceHolderApi;
 import com.example.myweather.network.QueryWeather;
@@ -31,6 +33,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ActivityShow extends AppCompatActivity {
+
     private final String TAG = this.getClass().getSimpleName();
 
     private String OPEN_WEATHER_MAP_IMAGE = "https://openweathermap.org/img/wn/";
@@ -62,7 +65,6 @@ public class ActivityShow extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
-
         viewTown = findViewById(R.id.view_town);
         enterTown = findViewById(R.id.spinner_city);
         humidity = findViewById(R.id.humidity);
@@ -73,12 +75,12 @@ public class ActivityShow extends AppCompatActivity {
         mainLayout = findViewById(R.id.main_layout);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, Repository.citys);
+                android.R.layout.simple_list_item_1, Repository.showCity());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         enterTown.setAdapter(adapter);
         enterTown.setOnItemSelectedListener(onItemSelectedListener());
 
-        // viewTown.setText(town);
+
         viewDate = findViewById(R.id.view_date);
         viewTemperature = findViewById(R.id.view_temperature);
         viewWindDirection = findViewById(R.id.view_wind_directions);
