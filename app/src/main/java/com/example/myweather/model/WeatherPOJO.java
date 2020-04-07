@@ -1,33 +1,24 @@
 package com.example.myweather.model;
 
+import androidx.annotation.NonNull;
 
+import java.util.List;
 
 public class WeatherPOJO {
-    private String visibility;
-
-    private String timezone;
-
-    private Main main;
-
-    private Clouds clouds;
-
-    private Sys sys;
-
-    private String dt;
-
     private Coord coord;
-
-    private Weather[] weather;
-
-    private String name;
-
-    private String cod;
-
-    private String id;
-
+    private List<WeatherBase> weather;
     private String base;
-
+    private Main main;
+    private String visibility;
     private Wind wind;
+    private Clouds clouds;
+    private String dt;
+    private Sys sys;
+    private String timezone;
+    private String id;
+    private String name;
+    private String cod;
+    //    private WeatherBase[] weatherBase;
 
     public String getVisibility() {
         return visibility;
@@ -85,14 +76,6 @@ public class WeatherPOJO {
         this.coord = coord;
     }
 
-    public Weather[] getWeather() {
-        return weather;
-    }
-
-    public void setWeather(Weather[] weather) {
-        this.weather = weather;
-    }
-
     public String getName() {
         return name;
     }
@@ -133,11 +116,20 @@ public class WeatherPOJO {
         this.wind = wind;
     }
 
+    public List<WeatherBase> getWeatherBase() {
+        return weather;
+    }
+
+    public void setWeatherBase(List<WeatherBase> weatherBase) {
+        this.weather = weatherBase;
+    }
+
+    @NonNull
     @Override
     public String toString() {
         return "\nClassPojo \n[visibility = " + visibility + ", timezone = " + timezone +
                 ", main = " + main + ", clouds = " + clouds + ", sys = " + sys + ", dt = " + dt +
-                ", coord = " + coord + ", weather = " + weather + ", name = " + name + ", cod = " +
+                ", coord = " + coord + ", name = " + name + ", cod = " +
                 cod + ", id = " + id + ", base = " + base + ", wind = " + wind + "]";
     }
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentShow">
+
+    <TextView
+        android:id="@+id/view_town"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:textAlignment="center"
+        android:text="Empty"
+        android:textAllCaps="true"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/view_date"
+        android:layout_width="163dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:text="Empty"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_town" />
+
+    <ImageView
+        android:id="@+id/view_sky_condit"
+        android:layout_width="123dp"
+        android:layout_height="117dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="232dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/view_temperature"
+        android:layout_width="102dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/view_town"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="260dp"
+        android:text="Empty"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/view_sky_condit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

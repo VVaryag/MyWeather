@@ -1,111 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ActivityShow"
-     android:background="@color/blue_background">
+    android:background="@color/blue_background"
+    tools:context=".activity.ActivityShow">
 
+    <Spinner
+        android:id="@+id/spinner_city"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/hint_town"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Kyiv" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="123dp"
+        android:layout_height="37dp"
+
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="36dp"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sky_condition"
+        tools:text="Humidity" />
+
+    <TextView
+        android:id="@+id/wind_direction"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_pressure"
+        tools:text="Wind direction" />
 
     <TextView
         android:id="@+id/view_town"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/view_date"
-        android:text="Empty"
-        android:textSize="36sp"
+
+        android:layout_marginTop="16dp"
         android:textAllCaps="true"
-        android:textColor="@color/white_text"/>
+        android:textColor="@color/white_text"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_date"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20sp"
+        android:layout_marginTop="40dp"
         android:textAllCaps="true"
-        android:text="Empty"
-        android:textSize="24sp"
-        android:textColor="@color/white_text"/>
+        android:textColor="@color/white_text"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_city"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_temperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="91dp"
         android:layout_below="@id/view_town"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"
-        android:text="Empty"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
         android:textColor="@color/white_text"
-        android:textSize="24sp"/>
+        android:textSize="64sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/view_town" />
 
     <TextView
         android:id="@+id/view_wind_directions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_temperature"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="75dp"
-        android:text="Empty"
-        android:textSize="16sp" />
+        android:layout_width="71dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/wind_direction"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wind_direction"
+        tools:text="Empty" />
+
+    <TextView
+        android:id="@+id/wind_speed"
+        android:layout_width="137dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/view_wind_directions"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:text="Wind speed" />
 
     <TextView
         android:id="@+id/view_wind_speed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_wind_directions"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="38dp"
-        android:text="Empty"
-        android:textSize="16sp"
-        android:textColor="@color/white_text" />
+        android:layout_width="77dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pressure"
+        tools:text="Empty" />
+
+    <TextView
+        android:id="@+id/pressure"
+        android:layout_width="123dp"
+        android:layout_height="27dp"
+
+        android:layout_marginTop="44dp"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toEndOf="@+id/wind_direction"
+        app:layout_constraintTop_toBottomOf="@+id/view_humidity"
+        tools:text="Pressure" />
+
+    <TextView
+        android:id="@+id/sky_condition"
+        android:layout_width="93dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/view_sky_condition"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="52dp"
+        android:textAlignment="center"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_sky_condition"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_pressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
         android:layout_below="@id/view_temperature"
-        android:layout_marginStart="259dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/view_wind_directions"
-        android:text="Empty"
-        android:textSize="16sp"
-        android:textColor="@color/white_text"/>
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wind_speed"
+        tools:text="Empty" />
 
     <TextView
         android:id="@+id/view_humidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="79dp"
+        android:layout_height="28dp"
         android:layout_below="@id/view_pressure"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:text="Empty"
-        android:textColor="@color/white_text"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:textColor="@color/white_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humidity"
+        tools:text="Empty" />
 
     <ImageView
         android:id="@+id/view_sky_condition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="116dp"
+        android:layout_height="106dp"
         android:layout_below="@+id/view_temperature"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="75dp"
-        android:layout_toEndOf="@+id/view_wind_directions"
-        android:text="Empty"
-        android:textColor="@color/white_text"/>
 
-    <TextView
-        android:id="@+id/view_precipitation"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/view_temperature"
+        app:layout_constraintTop_toBottomOf="@+id/view_town" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="186dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_city"
+        app:srcCompat="@drawable/term" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view_temperature"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="137dp"
-        android:layout_toEndOf="@+id/view_wind_directions"
-        android:text="Empty"
-        android:textColor="@color/white_text" />
-</RelativeLayout>
+
+        android:layout_marginBottom="176dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner_city" />
+</androidx.constraintlayout.widget.ConstraintLayout>
